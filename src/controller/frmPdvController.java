@@ -10,7 +10,10 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 
 /**
  *
@@ -18,10 +21,18 @@ import javafx.scene.control.Label;
  */
 public class frmPdvController implements Initializable {
     
-    @FXML
     private Label label;
-    
     @FXML
+    private TextField txfBuscarProd;
+    @FXML
+    private TableView<?> tbvProductos;
+    @FXML
+    private Button btnNuevoProd;
+    @FXML
+    private Button btnEditarProd;
+    @FXML
+    private Button btnBorrarProd;
+    
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
         label.setText("Hello World!");
@@ -31,5 +42,21 @@ public class frmPdvController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void buscarProductoAction(ActionEvent event) {
+    }
+
+    @FXML
+    private void nuevoProductoAction(ActionEvent event) {
+    }
+
+    @FXML
+    private void editarProductoAction(ActionEvent event) {
+    }
+
+    @FXML
+    private void borrarProductoAction(ActionEvent event) {
+    }
     
 }

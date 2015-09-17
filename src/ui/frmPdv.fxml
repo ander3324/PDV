@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.frmPdvController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.frmPdvController">
    <children>
       <AnchorPane layoutX="59.0" layoutY="40.0" />
       <GridPane layoutX="28.0" layoutY="28.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -15,7 +15,7 @@
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="161.0" minHeight="0.0" prefHeight="19.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="423.0" minHeight="10.0" prefHeight="417.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="437.0" minHeight="10.0" prefHeight="437.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
@@ -40,6 +40,48 @@
                 </Menu>
               </menus>
             </MenuBar>
+            <TabPane prefHeight="432.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="1">
+              <tabs>
+                <Tab text="          Ventas          ">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+                <Tab text="          Compras          ">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+                  <Tab text="          Clientes          ">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab text="      Productos      ">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="79.0" layoutY="23.0" text="Busqueda: " />
+                              <TextField fx:id="txfBuscarProd" layoutX="179.0" layoutY="18.0" onAction="#buscarProductoAction" prefHeight="25.0" prefWidth="389.0" promptText="Cod-Barras o Descripción" />
+                              <TableView fx:id="tbvProductos" layoutX="16.0" layoutY="58.0" prefHeight="291.0" prefWidth="668.0">
+                                <columns>
+                                  <TableColumn prefWidth="57.0" text="#" />
+                                  <TableColumn prefWidth="91.0" text="Cod-Barras" />
+                                    <TableColumn prefWidth="244.0" text="Descripcion" />
+                                    <TableColumn prefWidth="78.0" text="Stock" />
+                                    <TableColumn prefWidth="78.0" text="Precio" />
+                                    <TableColumn prefWidth="113.0" text="Proveedor" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="btnNuevoProd" layoutX="171.0" layoutY="365.0" mnemonicParsing="false" onAction="#nuevoProductoAction" prefHeight="25.0" prefWidth="105.0" text="Nuevo" />
+                              <Button fx:id="btnEditarProd" layoutX="283.0" layoutY="365.0" mnemonicParsing="false" onAction="#editarProductoAction" prefHeight="25.0" prefWidth="105.0" text="Editar" />
+                              <Button fx:id="btnBorrarProd" layoutX="395.0" layoutY="365.0" mnemonicParsing="false" onAction="#borrarProductoAction" prefHeight="25.0" prefWidth="106.0" text="Borrar" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
          </children>
       </GridPane>
    </children>

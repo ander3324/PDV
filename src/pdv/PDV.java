@@ -22,7 +22,8 @@ public class PDV extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/ui/frmPdv.fxml"));
         
         Scene scene = new Scene(root);
-        
+        stage.setTitle("Aplicación de Punto de Venta");
+        stage.setMaximized(false);
         stage.setScene(scene);
         stage.show();
     }
