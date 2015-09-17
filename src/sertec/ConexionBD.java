@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 public class ConexionBD {
     //Atributos de conexión con BD declarados como CONSTANTES:
     private static final String USU = "root";
-    private static final String PASS = "alumno";
+    private static final String PASS = "wacaballa";
     private static final String CC = "jdbc:mysql://localhost:3306/PDV";
    
     private static Connection conexion = null;
