@@ -52,4 +52,20 @@ public class ProductosDao {
         
         return listaPro;
     }
+    
+    public static List<Producto> selectProductos(String texto){
+        
+        //Borrar cualquier carga previa:
+        listaPro.clear();
+        
+        ConexionBD.conectar();
+        ConexionBD.ejecutarConsulta("Select id, cod_bar, descri, pre, cant, id_pro From Productos"+
+                " Where cod_bar Like '%" + texto + "%' Or descri Like '%" + texto + "%'");
+        llenarListaProductos(ConexionBD.getDatos());
+        ConexionBD.desconectar();
+        
+        return listaPro;
+    }
+    
+   
 }

@@ -65,6 +65,7 @@ public class ConexionBD {
             } else {
                 st.execute();  //Sólo ejecutar...
             }
+
         } catch (Exception e) {
             Logger.getLogger(ConexionBD.class.getName()).log(Level.SEVERE, null, e);
 

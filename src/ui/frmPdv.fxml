@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.cell.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
@@ -62,37 +63,37 @@
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                     <children>
                                         <Label layoutX="79.0" layoutY="23.0" text="Busqueda: " />
-                                        <TextField fx:id="txfBuscarProd" layoutX="179.0" layoutY="18.0" onAction="#buscarProductoAction" prefHeight="25.0" prefWidth="389.0" promptText="Cod-Barras o Descripción" />
-                                        <TableView fx:id="tbvProductos" layoutX="16.0" layoutY="58.0" prefHeight="291.0" prefWidth="668.0">
+                                        <TextField fx:id="txfBuscarProd" layoutX="179.0" layoutY="18.0" onAction="#buscarProductoAction" onKeyReleased="#buscarDinamico" prefHeight="25.0" prefWidth="389.0" promptText="Cod-Barras o Descripción" />
+                                        <TableView fx:id="tbvProductos" layoutX="16.0" layoutY="58.0" onMouseClicked="#editarMouseClicked" prefHeight="291.0" prefWidth="668.0">
                                             <columns>
-                                                <TableColumn prefWidth="57.0" text="#" >
+                                                <TableColumn prefWidth="57.0" text="#">
                                                     <cellValueFactory>
                                                         <javafx.scene.control.cell.PropertyValueFactory property="id" />
                                                     </cellValueFactory>
                                                 </TableColumn>
-                                                <TableColumn prefWidth="91.0" text="Cod-Barras" >
+                                                <TableColumn prefWidth="91.0" text="Cod-Barras">
                                                     <cellValueFactory>
                                                         <javafx.scene.control.cell.PropertyValueFactory property="cod_barras" />
                                                     </cellValueFactory>
                                                 </TableColumn>
-                                                <TableColumn prefWidth="244.0" text="Descripcion" >
+                                                <TableColumn prefWidth="244.0" text="Descripcion">
                                                     <cellValueFactory>
-                                                        <javafx.scene.control.cell.PropertyValueFactory property="descripcion"/> 
+                                                        <javafx.scene.control.cell.PropertyValueFactory property="descripcion" /> 
                                                     </cellValueFactory>
                                                 </TableColumn>
-                                                <TableColumn prefWidth="78.0" text="Stock" >
+                                                <TableColumn prefWidth="78.0" text="Stock">
                                                     <cellValueFactory>
-                                                        <javafx.scene.control.cell.PropertyValueFactory property="stock"/> 
+                                                        <javafx.scene.control.cell.PropertyValueFactory property="stock" /> 
                                                     </cellValueFactory>
                                                 </TableColumn>
-                                                <TableColumn prefWidth="78.0" text="Precio" >
+                                                <TableColumn prefWidth="78.0" text="Precio">
                                                     <cellValueFactory>
-                                                        <javafx.scene.control.cell.PropertyValueFactory property="precio"/> 
+                                                        <javafx.scene.control.cell.PropertyValueFactory property="precio" /> 
                                                     </cellValueFactory>
                                                 </TableColumn>
-                                                <TableColumn prefWidth="113.0" text="Proveedor" >
+                                                <TableColumn prefWidth="113.0" text="Proveedor">
                                                     <cellValueFactory>
-                                                        <javafx.scene.control.cell.PropertyValueFactory property="id_proveedor"/> 
+                                                        <javafx.scene.control.cell.PropertyValueFactory property="id_proveedor" /> 
                                                     </cellValueFactory>
                                                 </TableColumn>
                                             </columns>
